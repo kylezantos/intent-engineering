@@ -1,8 +1,8 @@
 # Intent Engineering
 
-A Claude Code skill that helps you ground design decisions in human needs — not abstractions, not feature lists, not aesthetic preferences.
+A Claude Code skill that grounds design decisions in human needs — not abstractions, not feature lists, not aesthetic preferences.
 
-## The Problem
+## What It Does
 
 Most design decisions start (and stop) at the surface:
 
@@ -10,27 +10,23 @@ Most design decisions start (and stop) at the surface:
 - **"Our product is the fastest way to ___"** — So what? Why does that matter to a human being?
 - **"We chose this visual language because it references Bauhaus"** — Cool, but your users don't know Bauhaus. What are they supposed to feel?
 
-These decisions aren't wrong — they're just incomplete. They describe *what* without connecting to *why it matters*. And when you can't trace a design choice back to a real human need, you can't evaluate whether it's working.
+These decisions aren't wrong — they're incomplete. They describe *what* without connecting to *why it matters*. When you can't trace a design choice back to a real human need, you can't evaluate whether it's working.
 
-## The Technique
-
-Intent Engineering combines two ideas:
+Intent Engineering helps you find that connection using two techniques:
 
 ### The Why Loop
 
-On a [Dive Club episode](https://www.youtube.com/watch?v=jrMjbdHNg4E), Ellis Hamburger described his process for working with founders on startup storytelling. He keeps asking **"why does that matter?"** until he hits bedrock — the fundamental human need underneath the features. We're calling that exercise "the Why Loop."
+Keep asking **"why does that matter?"** until you hit bedrock — the fundamental human need underneath the features.
 
 **Example (Raycast):**
 - "You don't have to switch apps" → *why does that matter?*
 - "You're not getting distracted" → *why does that matter?*
-- "You can stay in flow" → **Bedrock. "The shortcut to everything."**
+- "You can stay in flow" → **Bedrock: "The shortcut to everything."**
 
 **Example (Snapchat):**
 - "It's the fastest way to communicate" → *so that you can...?*
 - "Share moments from your day" → *why does that matter?*
-- "Your friends feel like they're there with you" → **Bedrock. "Deepen your relationships with the people that matter most."**
-
-Ellis uses this for branding and copy. This skill extends the same drilling technique to design decisions and visual language.
+- "Your friends feel like they're there with you" → **Bedrock: "Deepen your relationships with the people that matter most."**
 
 ### The Three-Question Framework
 
@@ -40,27 +36,42 @@ For any page, flow, or key moment in a product, answer three questions:
 2. **What should they explicitly notice?** — What draws conscious attention
 3. **What should they implicitly feel?** — The emotional undercurrent
 
-Then apply the Why Loop to each answer until you hit bedrock. The magic is in the connection check: does what they *notice* lead to what they should *feel*? Does what they *feel* motivate what they should *accomplish*? When those connections break, you've found a design gap.
+Then apply the Why Loop to each answer. The connection check is where it gets interesting: does what they *notice* lead to what they should *feel*? Does what they *feel* motivate what they should *accomplish*? When those connections break, you've found a design gap.
 
 ## Two Modes
 
 ### Start — New Project Discovery
 
-Walk through the three questions page by page for a new project. Drill each answer. Produce an intent brief that grounds every design decision in human need.
+Walk through the three questions page by page for a new project. Drill each answer with the Why Loop. Produce an intent brief that grounds every design decision in human need.
 
 ```
 /intent-engineering start
 ```
 
-### Audit — Existing Site Evaluation
+### Audit — Existing Site/Product Evaluation
 
-Take screenshots of an existing site, reflect back what the design communicates (visual hierarchy, emotional tone, implied action), and ask: **"Is that what you intended?"**
+Take screenshots of an existing site, reflect back what the design communicates, and ask: **"Is that what you intended?"**
 
-The audit mode is Socratic, not critical. It doesn't tell you your design is bad — it mirrors what your design is *saying* and lets you discover whether that matches what you *meant*.
+The audit is Socratic, not critical. It doesn't tell you your design is bad — it mirrors what your design is *saying* and lets you discover whether that matches what you *meant*.
 
 ```
 /intent-engineering audit https://your-site.com
 ```
+
+You can focus the audit on what you're most uncertain about — your copy, visual language, product positioning, a specific design decision — and the skill will weight its observations toward that while still looking at the full picture.
+
+## Use Cases
+
+- **Landing page copy audit** — "Does my headline communicate an idea or just list what I do?"
+- **Portfolio review** — "Does my site communicate who I am and what I care about, or just show work?"
+- **Product positioning** — "Can a first-time visitor understand why this matters in 5 seconds?"
+- **Visual language check** — "Does the visual tone match the feeling I want to create?"
+- **New project kickoff** — "Before I design anything, what should each page make someone accomplish, notice, and feel?"
+- **Design decision validation** — "I chose this direction — can I trace it back to a human need?"
+
+## What It's Not
+
+This isn't a UI audit tool. It doesn't evaluate visual quality, accessibility, or usability. It's about **intent alignment** — whether what your design communicates matches what it should communicate. The output is clarity about where intent and execution diverge, not a list of design fixes.
 
 ## Installation
 
@@ -72,6 +83,8 @@ Copy the `intent-engineering` directory to your Claude Code skills folder:
 
 Then invoke with `/intent-engineering` in any Claude Code session.
 
+**Cross-agent compatibility:** The core workflow (three questions, Why Loop, Socratic reflection) works on any AI coding agent. Claude Code users get enhanced features like tappable options and automated screenshots via `dev-browser`.
+
 ## Origin
 
-Synthesized from [Ellis Hamburger's Dive Club episode on startup storytelling](https://www.youtube.com/watch?v=jrMjbdHNg4E) and extended into product design by Kyle Zantos. Built with [skill-distillery](https://github.com/kylezantos/skill-distillery).
+Synthesized from [Ellis Hamburger's Dive Club episode on startup storytelling](https://www.youtube.com/watch?v=jrMjbdHNg4E) and extended into product design. Built with [skill-distillery](https://github.com/kylezantos/skill-distillery).

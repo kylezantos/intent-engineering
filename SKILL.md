@@ -58,7 +58,17 @@ Detect mode from `$ARGUMENTS`:
 | "audit", URL, "look at", "evaluate", "check my" | `workflows/audit.md` |
 | Ambiguous or no arguments | Ask which mode |
 
-If ambiguous, ask:
+### Focus hint extraction
+
+After routing, scan `$ARGUMENTS` for what the user wants to pressure-test — their copy, visual language, product positioning, whether a specific idea comes through, a particular design decision, etc. Pass any extracted focus to the workflow as initial context so Step 1 can confirm it rather than re-asking.
+
+### Mode selection (when ambiguous)
+
+If AskUserQuestion is available:
+- **Start** — New project. Walk through the three questions to build a grounded intent brief.
+- **Audit** — Existing site or product. Reflect what it communicates and discover where intent diverges from execution.
+
+Otherwise, ask:
 
 > I can help two ways:
 > 1. **Start** — You're beginning a new project. I'll walk you through the three questions page by page to build a grounded intent brief.
