@@ -21,13 +21,13 @@ Intent Engineering combines two ideas:
 On a [Dive Club episode](https://www.youtube.com/watch?v=jrMjbdHNg4E), Ellis Hamburger described his process for working with founders on startup storytelling. He keeps asking **"why does that matter?"** until he hits bedrock — the fundamental human need underneath the features. We're calling that exercise "the Why Loop."
 
 **Example (Raycast):**
-- "You don't have to switch apps" → *why?*
-- "You're not getting distracted" → *why?*
+- "You don't have to switch apps" → *why does that matter?*
+- "You're not getting distracted" → *why does that matter?*
 - "You can stay in flow" → **Bedrock. "The shortcut to everything."**
 
 **Example (Snapchat):**
 - "It's the fastest way to communicate" → *so that you can...?*
-- "Share moments from your day" → *why?*
+- "Share moments from your day" → *why does that matter?*
 - "Your friends feel like they're there with you" → **Bedrock. "Deepen your relationships with the people that matter most."**
 
 Ellis uses this for branding and copy. This skill extends the same drilling technique to design decisions and visual language.
