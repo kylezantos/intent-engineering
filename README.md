@@ -73,15 +73,43 @@ You can focus the audit on what you're most uncertain about — your copy, visua
 
 This isn't a UI audit tool. It doesn't evaluate visual quality, accessibility, or usability. It's about **intent alignment** — whether what your design communicates matches what it should communicate. The output is clarity about where intent and execution diverge, not a list of design fixes.
 
-## Installation
+## Install
 
-Copy the `intent-engineering` directory to your Claude Code skills folder:
+### One command (all agents)
 
+```bash
+npx skills add kylezantos/intent-engineering
 ```
-~/.claude/skills/intent-engineering/
+
+Auto-detects your installed agents and installs to each. Works with Claude Code, Codex, OpenCode, Cursor, Gemini CLI, Windsurf, and [35+ more](https://github.com/vercel-labs/skills).
+
+### Target specific agents
+
+```bash
+npx skills add kylezantos/intent-engineering -a claude-code
+npx skills add kylezantos/intent-engineering -a codex -a opencode
 ```
 
-Then invoke with `/intent-engineering` in any Claude Code session.
+### Manual install
+
+Copy the entire `intent-engineering/` directory into your agent's skills path:
+
+| Agent | Path |
+|-------|------|
+| Claude Code | `~/.claude/skills/intent-engineering/` |
+| Codex | `~/.codex/skills/intent-engineering/` |
+| OpenCode | `~/.config/opencode/skills/intent-engineering/` |
+| Cursor | `~/.cursor/skills/intent-engineering/` |
+| Gemini CLI | `~/.gemini/skills/intent-engineering/` |
+| Windsurf | `~/.codeium/windsurf/skills/intent-engineering/` |
+
+Or clone:
+
+```bash
+git clone https://github.com/kylezantos/intent-engineering.git ~/.claude/skills/intent-engineering
+```
+
+Then invoke with `/intent-engineering` in any session.
 
 **Cross-agent compatibility:** The core workflow (three questions, Why Loop, Socratic reflection) works on any AI coding agent. Claude Code users get enhanced features like tappable options and automated screenshots via `dev-browser`.
 
